@@ -44,7 +44,7 @@ function getClosestPlrToMouse()
 
     for i, v in pairs(players:GetPlayers()) do
         if v ~= plr then
-            --pcall(function()
+            pcall(function()
                 local checkPassed = true
     
                 if _G.TeamCheck then
@@ -59,7 +59,7 @@ function getClosestPlrToMouse()
                         distance = (ms.Hit.Position - v.Character.PrimaryPart.Position).magnitude
                     end
                 end
-            --end)
+            end)
         end
     end
 
